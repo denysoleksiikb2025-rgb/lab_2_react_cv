@@ -1,8 +1,7 @@
-function Footer() {
+export default function Footer() {
   return (
     <footer>
-      <p>Контакти: denys.oleksiy@example.com</p>
+      <p>&copy; 2026 Олексій Денис Олегович. Резюме створено в рамках лабораторної роботи №2.</p>
     </footer>
   );
 }
-export default Footer;
