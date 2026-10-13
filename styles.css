@@ -1,0 +1,105 @@
+/* --- Box Model та базові налаштування (Селектор тегу) --- */
+* {
+  box-sizing: border-box; /* Вимога: box-sizing */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px; /* Вимога: padding */
+}
+
+/* --- Селектор класу та Flexbox (Макет) --- */
+.container {
+  max-width: 900px;
+  margin: 0 auto; /* Вимога: margin */
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex; /* Вимога: Flexbox */
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Оформлення шапки */
+header {
+  border-bottom: 2px solid #3498db; /* Вимога: border */
+  padding-bottom: 15px;
+}
+
+address ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* --- Селектор атрибута --- */
+a[href^="mailto:"], 
+a[href^="tel:"] {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- Псевдокласи --- */
+a[href^="mailto:"]:hover, 
+a[href^="tel:"]:hover { /* Вимога: псевдоклас :hover */
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+ul li:nth-child(even) { /* Вимога: псевдоклас :nth-child */
+  background-color: #f9f9f9;
+}
+
+/* --- Селектор ID --- */
+#experience ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+#experience li {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-left: 3px solid #3498db;
+  padding-left: 10px;
+}
+
+section h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* --- Медіазапит для мобільних пристроїв (Вузький екран) --- */
+@media (max-width: 600px) { /* Вимога: медіазапит */
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+
+  address ul {
+    flex-direction: column; /* Змінюємо макет на вертикальний */
+    align-items: center;
+    gap: 5px;
+  }
+}

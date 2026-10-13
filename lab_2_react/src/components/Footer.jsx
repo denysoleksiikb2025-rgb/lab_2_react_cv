@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer>
-      <p>&copy; 2026 Олексій Денис Олегович. Резюме створено в рамках лабораторної роботи №2.</p>
+    <footer className="bg-gray-800 text-gray-400 p-6 text-center text-sm">
+      <p>&copy; 2026 Олексій Денис Олегович. Резюме створено в рамках лабораторної роботи №3.</p>
     </footer>
   );
 }
