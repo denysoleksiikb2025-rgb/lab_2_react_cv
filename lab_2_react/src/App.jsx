@@ -7,10 +7,10 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-4 font-sans text-gray-800">
-      <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden">
+    <div className="min-h-screen bg-slate-900 py-12 px-4 font-sans text-slate-300 selection:bg-emerald-500 selection:text-slate-900">
+      <div className="max-w-4xl mx-auto bg-slate-800 shadow-[0_0_40px_rgba(16,185,129,0.1)] rounded-3xl overflow-hidden border border-slate-700">
         <Header />
-        <main>
+        <main className="p-8 md:p-12 space-y-12">
           <About />
           <Education />
           <Experience />
